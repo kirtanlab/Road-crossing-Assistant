@@ -1,0 +1,51 @@
+1) For dataset storage 
+import os
+import torch
+import torchvision.transforms as transforms
+from torch.utils.data import Dataset
+import numpy as np
+from PIL import Image
+
+class CustomDataset(Dataset):
+    def __init__(self, root_dir, transform=None):
+        self.root_dir = root_dir
+        self.transform = transform
+        self.video_folders = sorted(os.listdir(root_dir))
+
+    def __len__(self):
+        return len(self.video_folders)
+
+    def __getitem__(self, idx):
+        video_folder = self.video_folders[idx]
+        frames_folder = os.path.join(self.root_dir, video_folder)
+        labels_file = os.path.join(self.root_dir, video_folder, "labels.npy")
+
+        # Load frames
+        frames = []
+        for frame_file in sorted(os.listdir(frames_folder)):
+            if frame_file.endswith(".jpg"):
+                frame_path = os.path.join(frames_folder, frame_file)
+                image = Image.open(frame_path)
+                frames.append(image)
+
+        # Load labels
+        labels = np.load(labels_file)
+
+        # Apply transformations
+        if self.transform is not None:
+            frames = [self.transform(frame) for frame in frames]
+
+        return frames, labels
+
+
+
+image_transform = transforms.Compose([
+    transforms.Resize((64, 64)), 
+    transforms.RandomApply([
+        transforms.ColorJitter(brightness=0.15, contrast=(0.8, 1.5), saturation=(0.6, 3))
+    ], p=0.5),
+    transforms.RandomHorizontalFlip(),
+    transforms.RandomRotation(10),
+    transforms.RandomResizedCrop(size=(8, 8), scale=(0.8, 1.0)),
+    transforms.ToTensor(),
+])

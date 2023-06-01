@@ -1,0 +1,14 @@
+1)FRAMES_WISEANNOTATE
+-->ANNOTATING FRAME WISE 
+-->Verifying and visulizing 
+
+2) FRAMES_FROMVIDEO
+--> Extracting Frames ( 15GB Dataset of Frame+ Video)
+--> Extracting labels from pickel files and extracting into frame wise into npy format so next time it will be extracted faster
+
+3) Conversion of Video to Array 
+-->Used Pre-built model to finding Co-ordinates of BBox 
+-->Stored Co-ordinates in Array Form
+
+4) Finding Speed & Direction 
+-->Finding Speed & Direction Using Multitracker	
