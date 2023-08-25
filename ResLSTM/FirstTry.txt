@@ -1,0 +1,199 @@
+Epoch 1, train_Precision: 0.514, train_Recall: 0.510, val_Precision: 0.345, val_Recall: 0.500
+Epoch 1, Final Training Accuracy: 60.25%, Training_Loss:  1.089
+Epoch 1, Validation Accuracy: 69.09%, Validation Loss: 0.462
+/home/kirtan/.conda/envs/stone/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch 2, train_Precision: 0.505, train_Recall: 0.502, val_Precision: 0.345, val_Recall: 0.500
+Epoch 2, Final Training Accuracy: 61.87%, Training_Loss:  1.066
+Epoch 2, Validation Accuracy: 69.09%, Validation Loss: 0.415
+/home/kirtan/.conda/envs/stone/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch 3, train_Precision: 0.518, train_Recall: 0.508, val_Precision: 0.345, val_Recall: 0.500
+Epoch 3, Final Training Accuracy: 62.72%, Training_Loss:  1.084
+Epoch 3, Validation Accuracy: 69.09%, Validation Loss: 0.403
+/home/kirtan/.conda/envs/stone/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch 4, train_Precision: 0.500, train_Recall: 0.500, val_Precision: 0.345, val_Recall: 0.500
+Epoch 4, Final Training Accuracy: 63.31%, Training_Loss:  1.034
+Epoch 4, Validation Accuracy: 69.09%, Validation Loss: 0.393
+/home/kirtan/.conda/envs/stone/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch 5, train_Precision: 0.538, train_Recall: 0.520, val_Precision: 0.345, val_Recall: 0.500
+Epoch 5, Final Training Accuracy: 63.03%, Training_Loss:  1.064
+Epoch 5, Validation Accuracy: 69.09%, Validation Loss: 0.398
+/home/kirtan/.conda/envs/stone/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch 6, train_Precision: 0.527, train_Recall: 0.515, val_Precision: 0.345, val_Recall: 0.500
+Epoch 6, Final Training Accuracy: 62.09%, Training_Loss:  1.048
+Epoch 6, Validation Accuracy: 69.09%, Validation Loss: 0.414
+/home/kirtan/.conda/envs/stone/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch 7, train_Precision: 0.544, train_Recall: 0.522, val_Precision: 0.345, val_Recall: 0.500
+Epoch 7, Final Training Accuracy: 63.39%, Training_Loss:  1.052
+Epoch 7, Validation Accuracy: 69.09%, Validation Loss: 0.323
+/home/kirtan/.conda/envs/stone/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch 8, train_Precision: 0.600, train_Recall: 0.547, val_Precision: 0.345, val_Recall: 0.500
+Epoch 8, Final Training Accuracy: 65.95%, Training_Loss:  1.086
+Epoch 8, Validation Accuracy: 69.09%, Validation Loss: 0.316
+/home/kirtan/.conda/envs/stone/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch 9, train_Precision: 0.597, train_Recall: 0.557, val_Precision: 0.345, val_Recall: 0.500
+Epoch 9, Final Training Accuracy: 65.71%, Training_Loss:  1.088
+Epoch 9, Validation Accuracy: 69.09%, Validation Loss: 0.310
+/home/kirtan/.conda/envs/stone/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch 10, train_Precision: 0.608, train_Recall: 0.541, val_Precision: 0.345, val_Recall: 0.500
+Epoch 10, Final Training Accuracy: 66.23%, Training_Loss:  1.074
+Epoch 10, Validation Accuracy: 69.09%, Validation Loss: 0.272
+/home/kirtan/.conda/envs/stone/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch 11, train_Precision: 0.630, train_Recall: 0.555, val_Precision: 0.345, val_Recall: 0.500
+Epoch 11, Final Training Accuracy: 67.13%, Training_Loss:  1.127
+Epoch 11, Validation Accuracy: 69.09%, Validation Loss: 0.251
+/home/kirtan/.conda/envs/stone/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch 12, train_Precision: 0.595, train_Recall: 0.540, val_Precision: 0.345, val_Recall: 0.500
+Epoch 12, Final Training Accuracy: 65.75%, Training_Loss:  1.003
+Epoch 12, Validation Accuracy: 69.09%, Validation Loss: 0.240
+Epoch 13, train_Precision: 0.570, train_Recall: 0.534, val_Precision: 0.568, val_Recall: 0.505                                              
+Epoch 13, Final Training Accuracy: 64.61%, Training_Loss:  0.987
+Epoch 13, Validation Accuracy: 68.92%, Validation Loss: 0.341
+Epoch 14, train_Precision: 0.621, train_Recall: 0.580, val_Precision: 0.582, val_Recall: 0.524                                              
+Epoch 14, Final Training Accuracy: 67.04%, Training_Loss:  0.972
+Epoch 14, Validation Accuracy: 68.58%, Validation Loss: 0.225
+Epoch 15, train_Precision: 0.664, train_Recall: 0.603, val_Precision: 0.572, val_Recall: 0.533                                              
+Epoch 15, Final Training Accuracy: 69.45%, Training_Loss:  0.905
+Epoch 15, Validation Accuracy: 67.69%, Validation Loss: 0.231
+Epoch 16, train_Precision: 0.644, train_Recall: 0.609, val_Precision: 0.583, val_Recall: 0.535                                              
+Epoch 16, Final Training Accuracy: 68.53%, Training_Loss:  0.923
+Epoch 16, Validation Accuracy: 68.27%, Validation Loss: 0.191
+/home/kirtan/.conda/envs/stone/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch 17, train_Precision: 0.568, train_Recall: 0.552, val_Precision: 0.345, val_Recall: 0.500
+Epoch 17, Final Training Accuracy: 63.24%, Training_Loss:  1.100
+Epoch 17, Validation Accuracy: 69.09%, Validation Loss: 0.346
+/home/kirtan/.conda/envs/stone/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch 18, train_Precision: 0.541, train_Recall: 0.518, val_Precision: 0.345, val_Recall: 0.500
+Epoch 18, Final Training Accuracy: 63.67%, Training_Loss:  1.132
+Epoch 18, Validation Accuracy: 69.09%, Validation Loss: 0.220
+Epoch 19, train_Precision: 0.547, train_Recall: 0.527, val_Precision: 0.626, val_Recall: 0.506                                              
+Epoch 19, Final Training Accuracy: 63.11%, Training_Loss:  1.093
+Epoch 19, Validation Accuracy: 69.21%, Validation Loss: 0.192
+Epoch 20, train_Precision: 0.642, train_Recall: 0.599, val_Precision: 0.570, val_Recall: 0.539                                              
+Epoch 20, Final Training Accuracy: 68.31%, Training_Loss:  0.947
+Epoch 20, Validation Accuracy: 67.14%, Validation Loss: 0.223
+Epoch 21, train_Precision: 0.655, train_Recall: 0.617, val_Precision: 0.557, val_Recall: 0.547                                              
+Epoch 21, Final Training Accuracy: 69.27%, Training_Loss:  0.868
+Epoch 21, Validation Accuracy: 64.54%, Validation Loss: 0.222
+Epoch 22, train_Precision: 0.656, train_Recall: 0.627, val_Precision: 0.566, val_Recall: 0.545                                              
+Epoch 22, Final Training Accuracy: 69.42%, Training_Loss:  0.837
+Epoch 22, Validation Accuracy: 66.27%, Validation Loss: 0.209
+Epoch 23, train_Precision: 0.647, train_Recall: 0.618, val_Precision: 0.553, val_Recall: 0.542                                              
+Epoch 23, Final Training Accuracy: 68.73%, Training_Loss:  0.899
+Epoch 23, Validation Accuracy: 64.35%, Validation Loss: 0.150
+Epoch 24, train_Precision: 0.667, train_Recall: 0.636, val_Precision: 0.581, val_Recall: 0.523                                              
+Epoch 24, Final Training Accuracy: 70.23%, Training_Loss:  1.121
+Epoch 24, Validation Accuracy: 68.58%, Validation Loss: 0.145
+Epoch 25, train_Precision: 0.658, train_Recall: 0.629, val_Precision: 0.590, val_Recall: 0.570                                              
+Epoch 25, Final Training Accuracy: 69.53%, Training_Loss:  0.843
+Epoch 25, Validation Accuracy: 67.04%, Validation Loss: 0.192
+Epoch 26, train_Precision: 0.679, train_Recall: 0.653, val_Precision: 0.576, val_Recall: 0.583                                              
+Epoch 26, Final Training Accuracy: 71.17%, Training_Loss:  0.846
+Epoch 26, Validation Accuracy: 61.95%, Validation Loss: 0.211
+Epoch 27, train_Precision: 0.654, train_Recall: 0.622, val_Precision: 0.578, val_Recall: 0.577                                              
+Epoch 27, Final Training Accuracy: 69.28%, Training_Loss:  0.841
+Epoch 27, Validation Accuracy: 64.09%, Validation Loss: 0.155
+Epoch 28, train_Precision: 0.678, train_Recall: 0.651, val_Precision: 0.584, val_Recall: 0.588                                              
+Epoch 28, Final Training Accuracy: 71.08%, Training_Loss:  0.862
+Epoch 28, Validation Accuracy: 63.77%, Validation Loss: 0.152
+Epoch 29, train_Precision: 0.672, train_Recall: 0.651, val_Precision: 0.608, val_Recall: 0.547                                              
+Epoch 29, Final Training Accuracy: 70.66%, Training_Loss:  0.905
+Epoch 29, Validation Accuracy: 69.13%, Validation Loss: 0.261
+Epoch 30, train_Precision: 0.682, train_Recall: 0.646, val_Precision: 0.603, val_Recall: 0.548                                              
+Epoch 30, Final Training Accuracy: 71.28%, Training_Loss:  1.026
+Epoch 30, Validation Accuracy: 68.92%, Validation Loss: 0.137
+Epoch 31, train_Precision: 0.686, train_Recall: 0.662, val_Precision: 0.586, val_Recall: 0.578                                              
+Epoch 31, Final Training Accuracy: 71.74%, Training_Loss:  0.805
+Epoch 31, Validation Accuracy: 65.70%, Validation Loss: 0.122
+Epoch 32, train_Precision: 0.677, train_Recall: 0.649, val_Precision: 0.592, val_Recall: 0.595                                              
+Epoch 32, Final Training Accuracy: 71.03%, Training_Loss:  0.834
+Epoch 32, Validation Accuracy: 64.52%, Validation Loss: 0.163
+Epoch 33, train_Precision: 0.679, train_Recall: 0.658, val_Precision: 0.591, val_Recall: 0.579                                              
+Epoch 33, Final Training Accuracy: 71.20%, Training_Loss:  0.832
+Epoch 33, Validation Accuracy: 66.44%, Validation Loss: 0.146
+Epoch 34, train_Precision: 0.689, train_Recall: 0.665, val_Precision: 0.596, val_Recall: 0.584                                              
+Epoch 34, Final Training Accuracy: 72.00%, Training_Loss:  0.848
+Epoch 34, Validation Accuracy: 66.83%, Validation Loss: 0.083
+Epoch 35, train_Precision: 0.694, train_Recall: 0.670, val_Precision: 0.613, val_Recall: 0.561                                              
+Epoch 35, Final Training Accuracy: 72.43%, Training_Loss:  1.017
+Epoch 35, Validation Accuracy: 69.21%, Validation Loss: 0.088
+Epoch 36, train_Precision: 0.688, train_Recall: 0.662, val_Precision: 0.607, val_Recall: 0.607                                              
+Epoch 36, Final Training Accuracy: 71.89%, Training_Loss:  0.787
+Epoch 36, Validation Accuracy: 66.30%, Validation Loss: 0.295
+Epoch 37, train_Precision: 0.703, train_Recall: 0.673, val_Precision: 0.595, val_Recall: 0.588                                              
+Epoch 37, Final Training Accuracy: 73.01%, Training_Loss:  0.809
+Epoch 37, Validation Accuracy: 66.18%, Validation Loss: 0.143
+Epoch 38, train_Precision: 0.676, train_Recall: 0.653, val_Precision: 0.595, val_Recall: 0.584                                              
+Epoch 38, Final Training Accuracy: 71.01%, Training_Loss:  0.815
+Epoch 38, Validation Accuracy: 66.59%, Validation Loss: 0.128
+Epoch 39, train_Precision: 0.604, train_Recall: 0.614, val_Precision: 0.542, val_Recall: 0.511                                              
+Epoch 39, Final Training Accuracy: 60.77%, Training_Loss:  0.734
+Epoch 39, Validation Accuracy: 34.04%, Validation Loss: 14.665
+/home/kirtan/.conda/envs/stone/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch 40, train_Precision: 0.502, train_Recall: 0.500, val_Precision: 0.155, val_Recall: 0.500
+Epoch 40, Final Training Accuracy: 64.30%, Training_Loss:  0.765
+Epoch 40, Validation Accuracy: 30.91%, Validation Loss: 7.098
+/home/kirtan/.conda/envs/stone/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch 41, train_Precision: 0.439, train_Recall: 0.436, val_Precision: 0.155, val_Recall: 0.500
+Epoch 41, Final Training Accuracy: 40.53%, Training_Loss:  0.752
+Epoch 41, Validation Accuracy: 30.91%, Validation Loss: 14.055
+Epoch 42:  68%|██████████▊     | 143/211 [04:46<02:14,  1.97s/batch, loss=1.09, train_accuracy=43.99%, val_accuracy=0.00Epoch 42:  68%|██████████▉     | 144/211 [04:46<02:12,  1.97s/batch, loss=1.09, train_accuracy=43.99%, val_accuracy=0.00Epoch 42:  68%|██████████▉     | 144/211 [04:48<02:12,  1.97s/batch, loss=1.12, train_accuracy=43.96%, val_accuracy=0.00Epoch 42:  69%|██████████▉     | 145/211 [04:48<02:10,  1.98s/batch, loss=1.12, train_accuracy=43.96%, val_accuracy=0.00/home/kirtan/.conda/envs/stone/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch 42, train_Precision: 0.441, train_Recall: 0.439, val_Precision: 0.345, val_Recall: 0.500
+Epoch 42, Final Training Accuracy: 48.38%, Training_Loss:  1.319
+Epoch 42, Validation Accuracy: 69.09%, Validation Loss: 0.085
+Epoch 43, train_Precision: 0.675, train_Recall: 0.648, val_Precision: 0.583, val_Recall: 0.587                                              
+Epoch 43, Final Training Accuracy: 70.89%, Training_Loss:  0.795
+Epoch 43, Validation Accuracy: 63.68%, Validation Loss: 0.202
+Epoch 44, train_Precision: 0.677, train_Recall: 0.653, val_Precision: 0.596, val_Recall: 0.581                                              
+Epoch 44, Final Training Accuracy: 71.06%, Training_Loss:  0.811
+Epoch 44, Validation Accuracy: 67.04%, Validation Loss: 0.238
+/home/kirtan/.conda/envs/stone/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch 45, train_Precision: 0.642, train_Recall: 0.613, val_Precision: 0.345, val_Recall: 0.500
+Epoch 45, Final Training Accuracy: 68.40%, Training_Loss:  1.305
+Epoch 45, Validation Accuracy: 69.09%, Validation Loss: 0.084
+Epoch 46, train_Precision: 0.688, train_Recall: 0.655, val_Precision: 0.587, val_Recall: 0.571                                              
+Epoch 46, Final Training Accuracy: 71.82%, Training_Loss:  0.893
+Epoch 46, Validation Accuracy: 66.51%, Validation Loss: 0.126
+/home/kirtan/.conda/envs/stone/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch 47, train_Precision: 0.608, train_Recall: 0.604, val_Precision: 0.345, val_Recall: 0.500
+Epoch 47, Final Training Accuracy: 64.91%, Training_Loss:  1.343
+Epoch 47, Validation Accuracy: 69.09%, Validation Loss: 0.076
+Epoch 48, train_Precision: 0.582, train_Recall: 0.557, val_Precision: 0.555, val_Recall: 0.556                                              
+Epoch 48, Final Training Accuracy: 64.50%, Training_Loss:  0.892
+Epoch 48, Validation Accuracy: 61.39%, Validation Loss: 0.487
+Epoch 49, train_Precision: 0.678, train_Recall: 0.660, val_Precision: 0.591, val_Recall: 0.576                                              
+Epoch 49, Final Training Accuracy: 71.13%, Training_Loss:  0.810
+Epoch 49, Validation Accuracy: 66.78%, Validation Loss: 0.113
+Epoch 50, train_Precision: 0.612, train_Recall: 0.622, val_Precision: 0.582, val_Recall: 0.591                                              
+Epoch 50, Final Training Accuracy: 62.60%, Training_Loss:  0.959
+Epoch 50, Validation Accuracy: 61.92%, Validation Loss: 0.267
+Epoch 51, train_Precision: 0.671, train_Recall: 0.631, val_Precision: 0.599, val_Recall: 0.591                                              
+Epoch 51, Final Training Accuracy: 70.43%, Training_Loss:  0.797
+Epoch 51, Validation Accuracy: 66.71%, Validation Loss: 0.197
+Epoch 52, train_Precision: 0.666, train_Recall: 0.661, val_Precision: 0.595, val_Recall: 0.598                                              
+Epoch 52, Final Training Accuracy: 69.97%, Training_Loss:  0.812
+Epoch 52, Validation Accuracy: 64.98%, Validation Loss: 0.175
+Epoch 53, train_Precision: 0.701, train_Recall: 0.670, val_Precision: 0.601, val_Recall: 0.589                                              
+Epoch 53, Final Training Accuracy: 72.89%, Training_Loss:  0.796
+Epoch 53, Validation Accuracy: 67.09%, Validation Loss: 0.077
+Epoch 54, train_Precision: 0.692, train_Recall: 0.670, val_Precision: 0.590, val_Recall: 0.590                                              
+Epoch 54, Final Training Accuracy: 72.30%, Training_Loss:  0.742
+Epoch 54, Validation Accuracy: 65.14%, Validation Loss: 0.140
+Epoch 55:  57%|████████▌      | 120/211 [04:02<03:13,  2.13s/batch, loss=0.953, train_accuracy=74.32%, val_accuracy=0.00%, val_loss=0.00000]

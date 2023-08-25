@@ -123,21 +123,22 @@ val_dataset = dataset.dataset(filenames_validation, labels_validation,mode="val"
 #Training 
 
 
-resnet = models.resnet50(weights=ResNet50_Weights.DEFAULT)
-resnet = nn.Sequential(*list(resnet.children())[:-2])  # Exclude last two layers
 
-resnet.eval()
+
 
 input_size_lstm = 8192  # Size of ResNet output (num_classes for ResNet-50)
 hidden_size_lstm = 128
 num_classes_lstm = 2  # Number of classes in your classification task
 
-lstm_model = Model.LSTMModel(input_size_lstm, hidden_size_lstm, num_classes_lstm)
+# lstm_model = Model.LSTMModel(input_size_lstm, hidden_size_lstm, num_classes_lstm)
+lstm_model = nn.LSTM(input_size_lstm,hidden_size_lstm,num_classes_lstm,batch_first=True)
+Linear = nn.Linear(hidden_size_lstm,1) #output is 1
+sigmoid = nn.Sigmoid()
 
-criterion = torch.nn.CrossEntropyLoss()
+# criterion = torch.nn.functional.binary_cross_entropy_with_logits()
 best_val_loss = float('inf')
 l2_lambda = 0.01
-optimizer = optim.AdamW(lstm_model.parameters(), lr=0.005)
+optimizer = optim.Adam([{'params':lstm_model.parameters()},{'params':Linear.parameters()}], lr=0.001)
 def add_regularization(model):
     l2_reg = torch.tensor(0.).to(device)
     for param in model.parameters():
@@ -170,31 +171,41 @@ for epoch in range(num_epochs):
                 if 'data' in batch:
                     images = batch['data']
                     labels = batch['label']
-
+                    lstm_model.train()
+                    Linear.train()
                     with torch.no_grad():
-                        # resnet_without_last_layer = nn.Sequential(*list(resnet.children())[:-2])
+                        resnet = models.resnet50(weights=ResNet50_Weights.DEFAULT)
+                        resnet = nn.Sequential(*list(resnet.children())[:-2])
+                        resnet.eval()
                         features = resnet(images)
-                        # print(features.shape)
-                    # print(features.shape) 
+
+                       
                     batch_size, input_channels, height, width = features.shape
                     input_size_resnet = input_channels * height * width
 
-                    # batch_size, input_size_resnet = features.shape
                     sequence_length = 1
                     features_reshaped = features.view(batch_size, sequence_length, input_size_resnet)
 
                     optimizer.zero_grad()
 
-                    lstm_output = lstm_model(features_reshaped)
+                    lstm_output,_ = lstm_model(features_reshaped)
+                    lstm_output = lstm_output[:,-1,:]
+                    lstm_output = sigmoid(Linear(lstm_output))
+                    # print('linear output:', lstm_output)
+                    lstm_output = lstm_output.view(-1)
+                    
+                    pos_weight = torch.tensor([1.92])  #to compute it, negatives (0s) / positives (1s) = 17437 / 9083
 
-                    train_loss = criterion(lstm_output, labels)
-
+                    train_loss = torch.nn.functional.binary_cross_entropy_with_logits(lstm_output, labels.float(),pos_weight=pos_weight)
+            
                     optimizer.zero_grad()
-                    train_loss += add_regularization(lstm_model)
+                    # train_loss += add_regularization(lstm_model)
                     train_loss.backward()
                     optimizer.step()
 
-                    _, predicted = torch.max(lstm_output, 1)
+                    # print('predicted before',lstm_output.tolist())
+                    predicted = (lstm_output >= 0.5).int()
+                    # print(predicted.tolist(),labels.tolist())
                     train_total += labels.size(0)
                     train_correct += (predicted == labels).sum().item()
 
@@ -212,8 +223,12 @@ for epoch in range(num_epochs):
                 if 'data' in batch:
                     images = batch['data']
                     labels = batch['label']
-
+                    lstm_model.eval()
+                    Linear.eval()
                     with torch.no_grad():
+                        resnet = models.resnet50(weights=ResNet50_Weights.DEFAULT)
+                        resnet = nn.Sequential(*list(resnet.children())[:-2])
+                        resnet.eval()
                         features = resnet(images)
 
                     batch_size, input_channels, height, width = features.shape
@@ -221,13 +236,17 @@ for epoch in range(num_epochs):
                     sequence_length = 1
                     features_reshaped = features.view(batch_size, sequence_length, input_size_resnet)
 
-                    lstm_output = lstm_model(features_reshaped)
+                    lstm_output,_ = lstm_model(features_reshaped)
+                    lstm_output = lstm_output[:,-1,:]
+                    lstm_output = Linear(lstm_output)
+                    lstm_output = lstm_output.view(-1)
 
-                    val_loss_item = criterion(lstm_output, labels)
+                    val_loss_item = torch.nn.functional.binary_cross_entropy_with_logits(lstm_output, labels.float())
+            
                     val_loss = val_loss_item.item()
-                    val_loss += add_regularization(lstm_model)
+                    # val_loss += add_regularization(lstm_model)
 
-                    _, predicted = torch.max(lstm_output, 1)
+                    predicted = (lstm_output >= 0.5).int()
                     val_total += labels.size(0)
                     val_correct += (predicted == labels).sum().item()
 
@@ -238,11 +257,11 @@ for epoch in range(num_epochs):
                     t.set_postfix(loss=train_loss.item(), train_accuracy=f"{train_accuracy:.2f}%", val_accuracy=f"{val_accuracy:.2f}",val_loss=f"{val_loss:.3f}")
     
 
-    train_precision = precision_score(train_all_true_labels, train_all_pred_labels, average='macro')  # Modify as needed
-    train_recall = recall_score(train_all_true_labels, train_all_pred_labels, average='macro')  # Modify as needed
+    train_precision = precision_score(train_all_true_labels, train_all_pred_labels, average='macro')  
+    train_recall = recall_score(train_all_true_labels, train_all_pred_labels, average='macro')  
     
-    val_precision = precision_score(val_all_true_labels, val_all_pred_labels, average='macro')  # Modify as needed
-    val_recall = recall_score(val_all_true_labels, val_all_pred_labels, average='macro')  # Modify as needed
+    val_precision = precision_score(val_all_true_labels, val_all_pred_labels, average='macro')  
+    val_recall = recall_score(val_all_true_labels, val_all_pred_labels, average='macro')  
 
     print(f"Epoch {epoch + 1}, train_Precision: {train_precision:.3f}, train_Recall: {train_recall:.3f}, val_Precision: {val_precision:.3f}, val_Recall: {val_recall:.3f}")
 
