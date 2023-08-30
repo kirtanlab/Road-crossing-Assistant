@@ -16,7 +16,7 @@ import random
 import glob  
 import Model
 import dataset
-
+print(torch.cuda.is_available())
 ################################################################
 #Getting Data ready 
 
@@ -122,7 +122,8 @@ Linear = nn.Linear(hidden_size_lstm,1).to(device) #output is 1
 sigmoid = nn.Sigmoid().to(device) 
 
 # criterion = torch.nn.functional.binary_cross_entropy_with_logits()
-best_val_loss = float('inf')
+best_precision = 0.0
+best_recall = 0.0
 best_model_state_dict = None
 l2_lambda = 0.01
 optimizer = optim.Adam([{'params':lstm_model.parameters()},{'params':Linear.parameters()}], lr=0.001)
@@ -178,7 +179,7 @@ for epoch in range(num_epochs):
                     train_losses.append(train_loss.to(device))
 
                     optimizer.zero_grad()
-                    train_loss += add_regularization(lstm_model)
+                    # train_loss += add_regularization(lstm_model)
                     train_loss.backward()
                     optimizer.step()
 
@@ -256,18 +257,20 @@ for epoch in range(num_epochs):
     train_loss = sum(train_losses) / len(train_losses)
     val_loss = sum(val_losses) / len(val_losses)
 
-    if val_loss < best_val_loss:
-        print("Best val_loss")
-        best_val_loss = val_loss
+    if val_precision > best_precision and val_recall > best_recall:
+        print("Best precision or recall")
+        best_recall = val_recall
+        best_precision = val_precision
         best_model_state_dict = lstm_model.state_dict()
-        torch.save(best_model_state_dict, "best_model.pt")
+        torch.save(best_model_state_dict, "2nd_lstm.pt")
 
     print(f"Epoch {epoch + 1}, train_Precision: {train_precision:.3f}, train_Recall: {train_recall:.3f}, val_Precision: {val_precision:.3f}, val_Recall: {val_recall:.3f}")
 
     print(f"Epoch {epoch + 1}, Final Training Accuracy: {train_accuracy:.2f}%, Training_Loss: {train_loss: .3f}")
     print(f"Epoch {epoch + 1}, Validation Accuracy: {val_accuracy:.2f}%, Validation Loss: {val_loss:.3f}")
 
-
-
+print("final save")
+lstm_state = lstm_model.state_dict()
+torch.save(lstm_state,'2nd_lstm.pt')
 ################################################################
 
